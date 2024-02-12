@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: white;
+  color: black;
+  font-size: 19px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 50px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.icon-wrapper {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon-btn {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cards-view,
+.list-view {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-view__item {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  background-color: #f5f5f5;
+}
+
+.cards-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-view__item {
+  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 30px;
+  padding: 25px;
+  background-color: #f5f5f5;
+  box-shadow: -1px 4px 8px 0px lightgray;
 }
 
-.App-link {
-  color: #61dafb;
+.card-view__item:last-child {
+  margin-bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-view__item:last-child {
+  margin-bottom: 0;
+}
+
+.card-view__name,
+.list-view__name {
+  text-transform: uppercase;
+}
+
+.card-view__name {
+  margin-bottom: 10px;
+}
+
+.list-view__img {
+  width: 120px;
+  height: 120px;
+}
+
+.card-view__img {
+  width: 250px;
+  height: 250px;
+}
+
+.card-view__price-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-view__price,
+.list-view__price {
+  color: red;
+}
+
+.card-view__btn,
+.list-view__btn {
+  color: red;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border: 2px solid red;
+  border-radius: 30px;
+  background-color: transparent;
+  font-weight: 600;
 }
